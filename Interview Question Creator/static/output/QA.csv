@@ -1,0 +1,92 @@
+Question,Answer
+1. **Identificazione dei Prompt**: Qual è la differenza principale tra un prompt sbagliato e un prompt corretto nel contesto della rimozione delle informazioni sensibili dalle email dei clienti?,"La differenza principale tra un prompt sbagliato e un prompt corretto nel contesto della rimozione delle informazioni sensibili dalle email dei clienti è che il prompt sbagliato non fornisce istruzioni chiare e dettagliate su come anonimizzare le informazioni, mentre il prompt corretto specifica esattamente quali sostituzioni devono essere effettuate (ad esempio, sostituire nomi, email, numeri di telefono e password con formati standardizzati). Il prompt corretto è quindi più diretto e dettagliato, facilitando l'anonimizzazione delle email."
+2. **Istruzioni di Anonimizzazione**: Quali sostituzioni devono essere effettuate per anonimizzare le email dei clienti secondo le istruzioni fornite nel prompt corretto?,"Per anonimizzare le email dei clienti secondo le istruzioni fornite nel prompt corretto, devono essere effettuate le seguenti sostituzioni:
+
+1. Sostituire tutti i nomi con ""NOMECLIENTE_[ID]"", dove [ID] è un numero progressivo.
+2. Sostituire tutte le email con ""EMAIL_[ID]@example.com"".
+3. Sostituire tutti i numeri di telefono con ""TELEFONO_[ID]"".
+4. Sostituire tutte le password con ""PASSWORD_[ID]""."
+3. **Analisi del Sentiment**: Quali sono i passaggi da seguire per classificare le richieste di assistenza clienti in base al sentiment e all'urgenza?,"I passaggi da seguire per classificare le richieste di assistenza clienti in base al sentiment e all'urgenza sono:
+
+1. Leggere attentamente la richiesta del cliente.
+2. Analizzare il sentiment della richiesta, determinando se è positivo, negativo o neutro.
+3. Valutare l'urgenza della richiesta su una scala da 1 a 5, dove:
+   - 1 = poco urgente
+   - 5 = molto urgente
+4. Fornire la classificazione nel formato specificato, indicando il sentiment e l'urgenza."
+4. **Esempi di Classificazione**: Fornisci un esempio di una richiesta di assistenza cliente e la relativa classificazione di sentiment e urgenza secondo il formato richiesto.,"<customer_request>
+Buongiorno, ho acquistato un frigorifero dal vostro negozio online due settimane fa. È arrivato ieri, ma quando l'ho collegato ho notato che non raffredda correttamente. La temperatura interna non scende sotto i 10 gradi Celsius, rendendo impossibile conservare cibi deperibili. Ho già buttato via del cibo che si è rovinato. Ho provato a contattare il servizio clienti telefonico, ma sono rimasto in attesa per oltre un'ora senza risposta. Ho veramente bisogno che questo problema venga risolto il prima possibile, dato che non posso permettermi di sprecare altro cibo o di acquistare un nuovo frigorifero. Potete per favore aiutarmi a risolvere questa situazione o organizzare una sostituzione urgente? Grazie per la vostra attenzione.
+</customer_request>
+<classiﬁcation><sentiment>negativo</sentiment><urgency>5</urgency></classiﬁcation>"
+5. **Struttura XML**: Come deve essere strutturata un'email di scuse per un cliente insoddisfatto utilizzando i tag XML? Elenca i tag necessari e i dati che devono essere inclusi.,"Un'email di scuse per un cliente insoddisfatto strutturata utilizzando i tag XML potrebbe avere la seguente struttura:
+
+```xml
+<email>
+    <destinatario>
+        <nome>[Nome del cliente]</nome>
+        <cognome>[Cognome del cliente]</cognome>
+        <email>[Email del cliente]</email>
+    </destinatario>
+    <mittente>
+        <nome>[Nome del mittente]</nome>
+        <cognome>[Cognome del mittente]</cognome>
+        <email>[Email del mittente]</email>
+    </mittente>
+    <oggetto>Scuse per il tuo recente acquisto</oggetto>
+    <corpo>
+        <introduzione>
+            <testo>Gentile [Nome del cliente],</testo>
+        </introduzione>
+        <messaggio>
+            <testo>Ci dispiace sapere che il tuo acquisto non ha soddisfatto le tue aspettative. Vogliamo scusarci sinceramente per l'inconveniente.</testo>
+        </messaggio>
+        <risoluzione>
+            <testo>Stiamo lavorando per risolvere il problema e ti contatteremo al più presto con una soluzione.</testo>
+        </risoluzione>
+        <conclusione>
+            <testo>Grazie per la tua comprensione.</testo>
+        </conclusione>
+    </corpo>
+    <firma>
+        <nome>[Nome del mittente]</nome>
+        <cognome>[Cognome del mittente]</cognome>
+        <posizione>[Posizione del mittente]</posizione>
+        <azienda>[Nome dell'azienda]</azienda>
+    </firma>
+</email>
+```
+
+I tag necessari includono informazioni sul destinatario, mittente, oggetto dell'email, corpo del messaggio suddiviso in introduzione, messaggio, risoluzione e conclusione, e infine la firma del mittente."
+6. **Ruolo e Spiegazione**: In che modo il prompt corretto per spiegare le maree cambia a seconda del ruolo del relatore (maestro delle elementari vs. docente universitario)?,"Il prompt corretto per spiegare le maree cambia a seconda del ruolo del relatore in quanto deve adattarsi al livello di comprensione e all'età del pubblico. 
+
+1. **Maestro delle elementari**: Il linguaggio utilizzato sarà semplice e accessibile, con esempi pratici e visivi per aiutare i giovani studenti a comprendere il concetto. Potrebbe includere analogie con situazioni quotidiane, come il modo in cui l'acqua del mare si alza e si abbassa, rendendo l'argomento più relatable e interessante per i bambini.
+
+2. **Docente universitario**: In questo caso, il linguaggio sarà più tecnico e dettagliato, con riferimenti a leggi fisiche, come la gravità e l'orbita della luna. Il docente potrebbe anche includere dati scientifici, modelli matematici e discussioni su ricerche recenti, poiché il pubblico universitario ha una base di conoscenze più avanzata e può comprendere concetti complessi.
+
+In sintesi, il prompt deve essere calibrato in base al pubblico, utilizzando un linguaggio e un livello di dettaglio appropriati per ciascun contesto educativo."
+7. **Formato di Output**: Qual è la differenza tra i prompt sbagliati e corretti riguardo alla richiesta di elencare i mesi dell'anno con il numero di giorni? Specifica i formati di output richiesti.,"La differenza tra i prompt sbagliati e corretti riguardo alla richiesta di elencare i mesi dell'anno con il numero di giorni è che il prompt corretto specifica un formato di output preciso, mentre il prompt sbagliato non lo fa.
+
+- **Prompt sbagliato**: Non specifica alcun formato di output. Chiede semplicemente di elencare i mesi dell'anno con il numero di giorni, senza indicare come deve essere presentato il risultato.
+
+- **Prompt corretto**: Richiede di emettere il risultato in un formato specifico, come JSON o XML. Ad esempio, nel caso del formato XML, il prompt corretto fornisce un template da seguire per strutturare l'output.
+
+**Formati di output richiesti**:
+1. **Formato JSON**: Non specificato nel prompt sbagliato, ma implicato nel prompt corretto.
+2. **Formato XML**: Specificato nel prompt corretto con un template che include tag per l'anno, mese, nome del mese e numero di giorni."
+8. **Concatenazione dei Prompt**: Descrivi il processo di concatenazione dei prompt in tre fasi per scrivere un post motivazionale su LinkedIn. Quali modifiche devono essere apportate in ciascuna fase?,"Il processo di concatenazione dei prompt per scrivere un post motivazionale su LinkedIn può essere suddiviso in tre fasi:
+
+**Fase 1:** 
+Sei il CEO di un'azienda tech con 20 anni di esperienza alle spalle. Scrivi un post motivazionale per LinkedIn dove dai consigli ai giovani laureati che si vogliono candidare per un posto in azienda.
+
+**Fase 2:** 
+Controlla il post appena generato, riduci un po’ l’enfasi per non sembrare un esaltato, rendi il tono più informale e chiudi con un messaggio positivo.
+
+**Fase 3:** 
+Cambia il modo con cui ti rivolgi al pubblico. Passa dal plurale “voi” al singolare “tu”.
+
+In sintesi, le modifiche apportate in ciascuna fase riguardano la scrittura iniziale del post, l'adattamento del tono e dello stile, e infine la personalizzazione del messaggio per un pubblico specifico."
+9. **Uso Professionale dell'AI**: Qual è l'obiettivo della tua academy IA360 e come può aiutare i professionisti a utilizzare l'AI nel loro lavoro?,Non so.
+"10. **Identificazione delle Urgenze**: Come si valuta l'urgenza di una richiesta di assistenza su una scala da 1 a 5, e cosa rappresentano i valori estremi in questa scala?","L'urgenza di una richiesta di assistenza viene valutata su una scala da 1 a 5, dove:
+
+- **1** rappresenta ""poco urgente"", indicando che la richiesta non richiede una risposta immediata e può essere gestita in un secondo momento.
+- **5** rappresenta ""molto urgente"", indicando che la richiesta necessita di un intervento immediato per evitare danni o disagi significativi."
